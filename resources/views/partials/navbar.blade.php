@@ -1,17 +1,23 @@
-<ul class="navbar-nav ms-auto">
-    @auth
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
-        </li>
-        <li class="nav-item">
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="btn btn-link nav-link">Logout</button>
-            </form>
-        </li>
-    @else
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">Login</a>
-        </li>
-    @endauth
-</ul>
+<header class="site-header">
+    <nav class="nav-shell" aria-label="Navigasi utama">
+        <a class="brand-mark" href="{{ url('/') }}">
+            <span class="brand-mark__symbol">B</span>
+            <span>
+                <strong>BRINS</strong>
+                <small>Digital workspace</small>
+            </span>
+        </a>
+
+        <div class="nav-actions">
+            @auth
+                <a class="nav-link {{ request()->routeIs('dashboard') ? 'is-active' : '' }}" href="{{ route('dashboard') }}">Dashboard</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="button button--quiet">Keluar</button>
+                </form>
+            @else
+                <a class="button button--quiet" href="{{ route('login') }}">Masuk</a>
+            @endauth
+        </div>
+    </nav>
+</header>

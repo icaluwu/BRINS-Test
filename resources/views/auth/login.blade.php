@@ -3,38 +3,49 @@
 @section('title', 'Login')
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-md-5 col-lg-4">
-        <div class="card shadow-sm">
-            <div class="card-body p-4">
-                <h1 class="h4 mb-3 text-center">Login ya</h1>
-
-                <form method="POST" action="{{ route('login') }}">
-                    @csrf
-
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Ini Username</label>
-                        <input type="text" id="username" name="username"
-                               class="form-control @error('username') is-invalid @enderror"
-                               value="{{ old('username') }}" autofocus>
-                        @error('username')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password"
-                               class="form-control @error('password') is-invalid @enderror">
-                        @error('password')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <button type="submit" class="btn btn-primary w-100">Masuk le</button>
-                </form>
-            </div>
+<section class="auth-layout">
+    <div class="auth-intro">
+        <span class="eyebrow">BRINS internal workspace</span>
+        <h1>Satu ruang untuk melihat data dengan lebih jelas.</h1>
+        <p>Masuk untuk mengakses ringkasan pengguna dan produk pada lingkungan kerja BRINS.</p>
+        <div class="intro-note">
+            <span class="intro-note__line"></span>
+            <span>Secure access · Product inquiry</span>
         </div>
     </div>
-</div>
+
+    <div class="form-panel">
+        <div class="form-panel__heading">
+            <span class="panel-kicker">Akun Anda</span>
+            <h2>Login</h2>
+            <p>Gunakan kredensial yang sudah terdaftar.</p>
+        </div>
+
+        <form method="POST" action="{{ route('login') }}" class="stack-form">
+            @csrf
+
+            <div class="field-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"
+                       class="@error('username') has-error @enderror"
+                       value="{{ old('username') }}" autocomplete="username" autofocus>
+                @error('username')
+                    <div class="field-error">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="field-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"
+                       class="@error('password') has-error @enderror"
+                       autocomplete="current-password">
+                @error('password')
+                    <div class="field-error">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <button type="submit" class="button button--primary">Masuk</button>
+        </form>
+    </div>
+</section>
 @endsection
