@@ -1,6 +1,6 @@
 # BRINS Test 2026
 
-Aplikasi ini dibuat sebagai bagian dari Tes BRINS 2026 oleh **Teuku Vaickal Rizki Irdian**. Profil personal developer tersedia di [icaluwu.site](https://icaluwu.site).
+Aplikasi ini dibuat sebagai jawaban dari Tes BRINS 2026 dari **Teuku Vaickal Rizki Irdian**. Profil personal developer tersedia di [icaluwu.site](https://icaluwu.site).
 
 ## Ringkasan
 
