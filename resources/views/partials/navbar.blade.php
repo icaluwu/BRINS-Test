@@ -3,8 +3,8 @@
         <a class="brand-mark" href="{{ url('/') }}">
             <span class="brand-mark__symbol">B</span>
             <span>
-                <strong>BRINS</strong>
-                <small>Digital workspace</small>
+                <strong>Tes BRINS</strong>
+                <small>Jawab semua 5 soal</small>
             </span>
         </a>
 

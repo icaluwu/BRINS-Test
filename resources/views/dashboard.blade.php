@@ -8,7 +8,7 @@
         <div>
             <span class="eyebrow">Overview / 01</span>
             <h1>Dashboard</h1>
-            <p>Ringkasan singkat dari data yang sedang dikelola.</p>
+            <p>Dashboard yang sudah diperbagus dari versi awal-nya, semua pakai nativeCSS.</p>
         </div>
         <span class="date-stamp">{{ now()->format('d M Y') }}</span>
     </div>
@@ -16,7 +16,7 @@
     <div class="metrics-grid">
         <article class="metric-card metric-card--dark">
             <div class="metric-card__top">
-                <span>Pengguna terdaftar</span>
+                <span>User terdaftar</span>
                 <span class="metric-index">01</span>
             </div>
             <strong>{{ $totalUsers }}</strong>
@@ -36,9 +36,9 @@
     <div class="dashboard-note">
         <div>
             <span class="panel-kicker">Product inquiry</span>
-            <h2>Data ringkas, keputusan lebih cepat.</h2>
+            <h2>Data jadi dikit, lebih cepat.</h2>
         </div>
-        <p>Gunakan API inquiry produk untuk mengambil data secara terproteksi menggunakan JWT.</p>
+        <p>Disini saya pakai API mengambil data secara terproteksi menggunakan JWT.</p>
     </div>
 </section>
 @endsection

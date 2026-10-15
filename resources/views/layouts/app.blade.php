@@ -16,7 +16,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <span>BRINS Test 2026</span>
-            <span>Built by Teuku Vaickal Rizki Irdian</span>
+            <span>Dibikin oleh Teuku Vaickal Rizki Irdian atau IcalUwU</span>
         </div>
     </footer>
 </body>
